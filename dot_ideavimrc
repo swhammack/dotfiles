@@ -1,0 +1,19 @@
+let mapleader = " "
+
+set surround
+set easymotion
+set NERDTree
+set multicursor
+set which-key
+
+set notimeout
+
+:map <leader>f  <Action>(ReformatCode)
+:map <leader>-  <Action>(MoveTabDown)
+:map <leader>|  <Action>(MoveTabRight)
+
+let g:WhichKey_ShowVimActions ="true"
+
+sethandler <C-C> n-v-i:ide 
+sethandler <C-X> n-v-i:ide 
+sethandler <C-V> n-v-i:ide 
