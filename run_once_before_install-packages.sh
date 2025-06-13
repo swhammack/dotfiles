@@ -1,5 +1,4 @@
 #!/bin/bash
-export BROWSER=wslview
 
 mise use -g zoxide
 mise use -g eza
