@@ -22,11 +22,8 @@ zmodule exa
 zmodule archive
 zmodule fzf
 
-#
-# OhMyZsh
-#
-zmodule ohmyzsh/ohmyzsh --root plugins/mise
-zmodule ohmyzsh/ohmyzsh --root plugins/chezmoi
+zmodule joke/zim-chezmoi
+zmodule joke/zim-mise
 
 zmodule joshskidmore/zsh-fzf-history-search
 

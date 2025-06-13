@@ -2,14 +2,6 @@ export PATH=$PATH:/home/swhammack/.local/bin
 
 export BROWSER=wslview
 
-# Make sure completions folder for mise exists
-export ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/oh-my-zsh"
-[[ -d $ZSH_CACHE_DIR ]] || mkdir -p "$ZSH_CACHE_DIR"
-
-if [ ! -f "$ZSH_CACHE_DIR/completions/_mise" ]; then
-  mkdir -p "$ZSH_CACHE_DIR/completions"
-  touch "$ZSH_CACHE_DIR/completions/_mise"
-fi
 
 # Start configuration added by Zim install {{{
 
