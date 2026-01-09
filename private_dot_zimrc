@@ -21,9 +21,11 @@ zmodule utility
 zmodule exa
 zmodule archive
 zmodule fzf
+zmodule custom
 
 zmodule joke/zim-chezmoi
 zmodule joke/zim-mise
+zmodule joke/zim-github-cli
 
 zmodule joshskidmore/zsh-fzf-history-search
 
