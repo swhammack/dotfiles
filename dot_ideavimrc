@@ -17,3 +17,9 @@ let g:WhichKey_ShowVimActions ="true"
 sethandler <C-C> n-v-i:ide 
 sethandler <C-X> n-v-i:ide 
 sethandler <C-V> n-v-i:ide 
+sethandler <C-Z> n-v-i:ide
+sethandler <C-B> n-v-i:ide 
+sethandler <C-Q> n-v-i:ide 
+sethandler <C-A> n-v-i:ide 
+sethandler <C-F> n-v-i:ide 
+sethandler <C-R> n-v-i:ide
