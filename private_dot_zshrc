@@ -1,4 +1,4 @@
-export PATH=$PATH:/home/swhammack/.local/bin
+export PATH=$PATH:/home/seanhammack/.local/bin
 
 # Start configuration added by Zim install {{{
 
@@ -131,3 +131,5 @@ unset key
 # }}} End configuration added by Zim install
 
 eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/powerlevel10k_rainbow.omp.json)"
+
+eval "$(direnv hook zsh)"
