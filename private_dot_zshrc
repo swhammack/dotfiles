@@ -133,3 +133,9 @@ unset key
 eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/powerlevel10k_rainbow.omp.json)"
 
 eval "$(direnv hook zsh)"
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"
+
+alias godesktop="ddcutil setvcp 60 0x0f && ddcutil setvcp 60 0x11 --display 2"
