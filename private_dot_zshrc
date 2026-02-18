@@ -138,6 +138,8 @@ eval "$(direnv hook zsh)"
 
 eval "$(atuin init zsh)"
 
+eval "$(zoxide init zsh)"
+
 alias godesktop="ddcutil setvcp 60 0x0f && ddcutil setvcp 60 0x11 --display 2"
 
 export AWS_PROFILE="admin"
