@@ -13,14 +13,14 @@
       "alignment": "left",
       "segments": [
         {
-          "type": "session",
-          "style": "diamond",
+          "background": "#2e9599",
           "foreground": "#ffffff",
-          "background": "#c386f1",
-          "leading_diamond": "",
-          "trailing_diamond": "",
-          "template": "{{ if .SSHSession }} {{ end }}{{ .UserName }}"
-        },
+          "leading_diamond": "\ue0b6",
+          "powerline_symbol": "\ue0b0",
+          "style": "diamond",
+          "template": "{{ if .SSHSession }}\ueba9{{ else }}\uf108{{ end }} {{ .UserName }}@{{ .HostName }}",
+          "type": "session"
+        },  
         {
           "options": {
             "home_icon": "~",
