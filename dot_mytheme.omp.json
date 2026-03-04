@@ -18,7 +18,7 @@
           "leading_diamond": "\ue0b6",
           "powerline_symbol": "\ue0b0",
           "style": "diamond",
-          "template": "{{ if .SSHSession }}\ueba9{{ else }}\uf108{{ end }} {{ .UserName }}@{{ .HostName }}",
+          "template": "{{ if .SSHSession }}\ueba9{{ else }}\uf108{{ end }} {{ trimPrefix \"sean-hammack-\" .HostName }}",
           "type": "session"
         },  
         {
@@ -63,8 +63,8 @@
             "fetch_version": true
           },
           "template": " {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} \ue718 ",
-          "foreground": "#ffffff",
           "powerline_symbol": "\ue0b2",
+          "foreground": "#ffffff",
           "background": "#689f63",
           "type": "node",
           "style": "powerline",
@@ -137,7 +137,7 @@
           "options": {
             "display_default": false
           },
-          "template": " {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} \ue7ad ",
+          "template": " {{ .Profile }} \ue7ad ",
           "foreground": "#ffffff",
           "powerline_symbol": "\ue0b2",
           "type": "aws",
