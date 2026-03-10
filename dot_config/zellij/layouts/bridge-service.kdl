@@ -1,0 +1,24 @@
+layout {
+    default_tab_template {
+    // the default zellij tab-bar and status bar plugins
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    cwd "~/workspace/lab37/lab37/bridge_service"
+    tab name="bridge-service" {
+        pane {
+            command "make"
+            args "upbridge"
+        }
+        pane {
+            cwd "frontend"
+            command "make"
+            args "upkosweb"
+        }
+    }
+}
