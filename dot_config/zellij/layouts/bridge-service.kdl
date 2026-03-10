@@ -9,14 +9,13 @@ layout {
             plugin location="zellij:status-bar"
         }
     }
-    cwd "~/workspace/lab37/lab37/bridge_service"
+    cwd "~/workspace/lab37/lab37/kitchenos"
     tab name="bridge-service" {
         pane {
             command "make"
             args "upbridge"
         }
         pane {
-            cwd "frontend"
             command "make"
             args "upkosweb"
         }
