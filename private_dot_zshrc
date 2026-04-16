@@ -141,7 +141,7 @@ eval "$(zoxide init zsh)"
 autoload bashcompinit && bashcompinit
 complete -C "$(which aws_completer)" aws
 
-alias golaptop="ddcutil setvcp 60 0x19 --display 1 && ddcutil setvcp 60 0x11 --display 2"
+alias golaptop="ddcutil setvcp 60 0x11 --display 1 && ddcutil setvcp 60 0x19 --display 2"
 alias godesktop="ddcutil setvcp 60 0x0f --display 1 && ddcutil setvcp 60 0x0f --display 2"
 
 export AWS_PROFILE="lab37"
