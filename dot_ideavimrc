@@ -3,7 +3,6 @@ let mapleader = " "
 set surround
 set easymotion
 set NERDTree
-set multicursor
 set which-key
 
 set notimeout
@@ -23,3 +22,6 @@ sethandler <C-Q> n-v-i:ide
 sethandler <C-A> n-v-i:ide 
 sethandler <C-F> n-v-i:ide 
 sethandler <C-R> n-v-i:ide
+sethandler <C-K> n-v-i:ide
+sethandler <C-S> n-v-i:ide
+sethandler <C-P> n-v-i:ide
