@@ -141,6 +141,10 @@ eval "$(zoxide init zsh)"
 autoload bashcompinit && bashcompinit
 complete -C "$(which aws_completer)" aws
 
+if [[ -z "$ZELLIJ_SESSION_NAME" ]]; then
+    zellij attach -c $USER@$(hostname)
+fi
+
 alias golaptop="ddcutil setvcp 60 0x11 --display 1 && ddcutil setvcp 60 0x19 --display 2"
 alias godesktop="ddcutil setvcp 60 0x0f --display 1 && ddcutil setvcp 60 0x0f --display 2"
 
