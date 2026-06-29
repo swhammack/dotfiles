@@ -1,0 +1,89 @@
+### Bridge Service - Print Mise Label
+@baseUrl = http://localhost:8080
+@bearerToken = Bearer eyJraWQiOiJUMURlV1Bydk9uL2ZSK3N0Z0lGZ2IzMm9zVFdTZTFVQ3AwanQ0ZDFxTkhRPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxNGQ4MzQ2OC00MDcxLTcwZDUtOWYzYy1mOTkxYWVjOGI4OWYiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGxhYjM3LWJzLWEgZW1haWwiLCJhdXRoX3RpbWUiOjE3ODAzMjM2OTksImlzcyI6Imh0dHBzOi8vY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdXMtZWFzdC0xX0I1NUoxcmQ0YSIsImV4cCI6MTc4MDM2Njg5OSwiaWF0IjoxNzgwMzIzNzAwLCJ2ZXJzaW9uIjoyLCJqdGkiOiJjZGMxZjA0Yy1kMmI1LTRjODYtOTBkNC0zZTVkNzhjNWM0ZjkiLCJjbGllbnRfaWQiOiI2Nzd1MWRzNHRqZHQyY3FpbHJrcHJwZjh2NSIsInVzZXJuYW1lIjoic2Vhbi5oYW1tYWNrIn0.opQmgwhyAt-an7lVUhTGfpuU9lcn6EKL3XADEeG61l4uuTGOdFCMytgB1xy9_0FIbsqHToib88hXNgWWtt1tXsUKdAnyO8P5LJk1smzx1IFXerUEpY3g_ZoMvUUmKR4B21ucgmi6qEwSBMcOgeAEl3zT4DIOCE3RCuktAIqFMY8RrMiWEHco-ZuNsZpGFr2MT97axLZd-y6FZl66PLhTZDON6k43T0W9G5K928-haNS-zOObMr339QrqcPiqPCcDcBBN3NoHLYAzF-UUIFl1nQkyqHZmhNNv_0qsuUY3-f1h4gJozHH5yEGiFIT6lcDUPcG0AgCca0EZRPHzlNbM1A
+@storeId = 02c2638a-7a95-4109-8aef-9b9dff41345f
+@robotSerialNumber = BB-0010
+
+POST {{baseUrl}}/api/v1/labels/inventory/print
+Authorization: {{bearerToken}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "store_id": "{{storeId}}",
+  "robot_serial_number": "{{robotSerialNumber}}",
+  "label": {
+    "inventory_source_id": "inventory-source-123",
+    "component_name": "Shredded Lettuce",
+    "name": "crisp-otter 1",
+    "batch_id": "4ef20dae-f2de-4736-810c-244dc521e697",
+    "prepped_at": 1779192000000000000,
+    "expired_at": 1779278400000000000,
+    "prepared_by": "Sean",
+    "amount_prepped": "12 hotel pans"
+  }
+}
+###
+
+POST {{baseUrl}}/api/v1/labels/inventory/print
+Authorization: {{bearerToken}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "store_id": "{{storeId}}",
+  "robot_serial_number": "{{robotSerialNumber}}",
+  "label": {
+    "inventory_source_id": "inventory-source-123",
+    "component_name": "Shredded Lettuce",
+    "name": "crisp-otter 2",
+    "batch_id": "4ef20dae-f2de-4736-810c-244dc521e697",
+    "prepped_at": 1779192000000000000,
+    "expired_at": 1779278400000000000,
+    "prepared_by": "Sean",
+    "amount_prepped": "12 hotel pans"
+  }
+}
+###
+
+POST {{baseUrl}}/api/v1/labels/inventory/print
+Authorization: {{bearerToken}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "store_id": "{{storeId}}",
+  "robot_serial_number": "{{robotSerialNumber}}",
+  "label": {
+    "inventory_source_id": "inventory-source-123",
+    "component_name": "Shredded Lettuce",
+    "name": "crisp-otter 3",
+    "batch_id": "4ef20dae-f2de-4736-810c-244dc521e697",
+    "prepped_at": 1779192000000000000,
+    "expired_at": 1779278400000000000,
+    "prepared_by": "Sean",
+    "amount_prepped": "12 hotel pans"
+  }
+}
+###
+
+POST {{baseUrl}}/api/v1/labels/inventory/print
+Authorization: {{bearerToken}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "store_id": "{{storeId}}",
+  "robot_serial_number": "{{robotSerialNumber}}",
+  "label": {
+    "inventory_source_id": "inventory-source-123",
+    "component_name": "Shredded Lettuce",
+    "name": "crisp-otter 4",
+    "batch_id": "4ef20dae-f2de-4736-810c-244dc521e697",
+    "prepped_at": 1779192000000000000,
+    "expired_at": 1779278400000000000,
+    "prepared_by": "Sean",
+    "amount_prepped": "12 hotel pans"
+  }
+}
+###

@@ -1,0 +1,102 @@
+### Print mise label
+ @baseUrl = http://localhost:8080
+ @token = Bearer eyJraWQiOiJUMURlV1Bydk9uL2ZSK3N0Z0lGZ2IzMm9zVFdTZTFVQ3AwanQ0ZDFxTkhRPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxNGQ4MzQ2OC00MDcxLTcwZDUtOWYzYy1mOTkxYWVjOGI4OWYiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGxhYjM3LWJzLWEgZW1haWwiLCJhdXRoX3RpbWUiOjE3ODAwNTk1NjQsImlzcyI6Imh0dHBzOi8vY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb20vdXMtZWFzdC0xX0I1NUoxcmQ0YSIsImV4cCI6MTc4MDEwMjc2NCwiaWF0IjoxNzgwMDU5NTY2LCJ2ZXJzaW9uIjoyLCJqdGkiOiJmMmVlNWYwMi04ZWVhLTRjZDctOWZkMS04ZDU2N2NiNzQ4NjIiLCJjbGllbnRfaWQiOiI2Nzd1MWRzNHRqZHQyY3FpbHJrcHJwZjh2NSIsInVzZXJuYW1lIjoic2Vhbi5oYW1tYWNrIn0.jqXPLQMTeytXvuqIffGF7dE5lelFGAQvlUXFOnWNxG5ZNQOzpNz_rIFP0cd16OxXnUxVBuXh3KaqFCdlxYfgKsFEUNr0N9Ih1NQ7FkYgCaBh4nEqhelnpJKmU_xbCoodPipwZiTmw9AFvGfnQcmcX0wg-Nien6rA_9DWS8vAYgi2rGeL-JnD4pZJlqNdd-usIl8xxc9KLqVh0qb6qNN407pEsiMO7DtHtwNYIbWMY3AGrwiRHOXECW7-x-iR_X55Jdd1_ucpg7bJbUxsI_tKvPHQQa7iqoaBFG3SIRWiWVvhQ9_I18XQ2XdDCEa3JouPmUfzRYQ6XehuZpxdE4W15g
+
+POST {{baseUrl}}/api/v1/labels/inventory/print
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "store_id": "08c54d05-9f8b-4cf9-a1e5-54dc98820f05",
+  "robot_serial_number": "BB-0010",
+  "label": {
+    "inventory_source_id": "inventory-source-42",
+    "component_name": "Romaine Lettuce",
+    "name": "1",
+    "batch_id": "batch-20260519-001",
+    "prepped_at": 1747658400000000000,
+    "expired_at": 1747665600000000000,
+    "prepared_by": "jane.doe",
+    "amount_prepped": "6 qt"
+  }
+}
+
+###
+POST {{baseUrl}}/api/v1/labels/inventory/print
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "store_id": "08c54d05-9f8b-4cf9-a1e5-54dc98820f05",
+  "robot_serial_number": "BB-0010",
+  "label": {
+    "inventory_source_id": "inventory-source-42",
+    "component_name": "Romaine Lettuce",
+    "name": "2",
+    "batch_id": "batch-20260519-001",
+    "prepped_at": 1747658400000000000,
+    "expired_at": 1747665600000000000,
+    "prepared_by": "jane.doe",
+    "amount_prepped": "6 qt"
+  }
+}
+
+###
+POST {{baseUrl}}/api/v1/labels/inventory/print
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "store_id": "08c54d05-9f8b-4cf9-a1e5-54dc98820f05",
+  "robot_serial_number": "BB-0010",
+  "label": {
+    "inventory_source_id": "inventory-source-42",
+    "component_name": "Romaine Lettuce",
+    "name": "3",
+    "batch_id": "batch-20260519-001",
+    "prepped_at": 1747658400000000000,
+    "expired_at": 1747665600000000000,
+    "prepared_by": "jane.doe",
+    "amount_prepped": "6 qt"
+  }
+}
+
+###
+POST {{baseUrl}}/api/v1/labels/inventory/print
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "store_id": "08c54d05-9f8b-4cf9-a1e5-54dc98820f05",
+  "robot_serial_number": "BB-0010",
+  "label": {
+    "inventory_source_id": "inventory-source-42",
+    "component_name": "Romaine Lettuce",
+    "name": "4",
+    "batch_id": "batch-20260519-001",
+    "prepped_at": 1747658400000000000,
+    "expired_at": 1747665600000000000,
+    "prepared_by": "jane.doe",
+    "amount_prepped": "6 qt"
+  }
+}
+
+###
+POST {{baseUrl}}/api/v1/labels/inventory/print
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "store_id": "08c54d05-9f8b-4cf9-a1e5-54dc98820f05",
+  "robot_serial_number": "BB-0010",
+  "label": {
+    "inventory_source_id": "inventory-source-42",
+    "component_name": "Romaine Lettuce",
+    "name": "5",
+    "batch_id": "batch-20260519-001",
+    "prepped_at": 1747658400000000000,
+    "expired_at": 1747665600000000000,
+    "prepared_by": "jane.doe",
+    "amount_prepped": "6 qt"
+  }
+}
