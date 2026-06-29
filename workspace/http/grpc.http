@@ -1,0 +1,91 @@
+###
+# curl localhost:8081/api/kitchenos.auth.v2.AuthService/ListUsers
+POST localhost:8081/api/kitchenos.auth.v2.AuthService/ListUsers
+Content-Type: application/json
+
+{}
+
+###
+
+# curl localhost:8081/api/kitchenos.health.v1.HealthService/Ping
+POST localhost:8081/api/kitchenos.health.v1.HealthService/Ping
+Content-Type: application/json
+
+{}
+
+###
+
+POST localhost:8081/api/kitchenos.auth.v2.AuthService/ListAssumablePersonas
+Content-Type: application/json
+
+{}
+
+###
+POST localhost:8081/api/kitchenos.auth.v2.AuthService/AssumePersona
+Content-Type: application/json
+
+{
+  "user": "845884c8-d051-702c-a3c5-02dfb0fc7a8d"
+}
+
+###
+POST localhost:8081/api/kitchenos.auth.v2.AuthService/AssumePersona
+Content-Type: application/json
+
+{
+  "persona": "32f44431-6698-11f1-907b-7e39c7eccde3"
+}
+
+###
+POST localhost:8081/api/kitchenos.auth.v2.AuthService/DiscardPersona
+Content-Type: application/json
+
+{}
+
+###
+GET localhost:8080/_bff/login
+
+###
+POST localhost:8081/api/kitchenos.inventory.v1.InventoryService/ListInventoryActions
+Content-Type: application/json
+
+{
+  "sessionId": "8863fcfc-5629-4e29-8daa-648a6782adc7"
+}
+
+###
+POST localhost:8081/api/kitchenos.item.unit.v1.UnitService/ListUnits
+Content-Type: application/json
+
+{}
+###
+POST localhost:8081/api/kitchenos.item.unit.v1.UnitService/CreateUnit
+Content-Type: application/json
+
+{
+  "name": "test unit",
+  "unitType": "UNIT_TYPE_WEIGHT",
+  "abbreviation": "tu",
+  "isBaseUnit": false
+}
+
+###
+POST localhost:8081/api/kitchenos.item.unit.v1.UnitService/UpdateUnit
+Content-Type: application/json
+
+{
+  "unit_id": "dc4f212b-70b8-11f1-b5aa-4cc5d924fc1e",
+  "name": "test unit update test",
+  "unitType": "UNIT_TYPE_WEIGHT",
+  "abbreviation": "tuu",
+  "isBaseUnit": true
+}
+
+###
+POST localhost:8081/api/kitchenos.item.unit.v1.UnitService/ArchiveUnit
+Content-Type: application/json
+
+{
+  "unit_id": "dc4f212b-70b8-11f1-b5aa-4cc5d924fc1e",
+  "unarchive": true
+}
