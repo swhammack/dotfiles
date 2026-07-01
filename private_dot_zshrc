@@ -151,3 +151,5 @@ alias godesktop="ddcutil setvcp 60 0x0f --display 1 && ddcutil setvcp 60 0x0f --
 export AWS_PROFILE="lab37"
 
 alias authlab37="(cd /home/seanhammack/workspace/lab37/scripts && ./aws-auth)"
+
+COSMIC_DISABLE_DIRECT_SCANOUT=1

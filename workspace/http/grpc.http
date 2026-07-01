@@ -58,6 +58,7 @@ POST localhost:8081/api/kitchenos.item.unit.v1.UnitService/ListUnits
 Content-Type: application/json
 
 {}
+
 ###
 POST localhost:8081/api/kitchenos.item.unit.v1.UnitService/CreateUnit
 Content-Type: application/json
@@ -88,4 +89,55 @@ Content-Type: application/json
 {
   "unit_id": "dc4f212b-70b8-11f1-b5aa-4cc5d924fc1e",
   "unarchive": true
+}
+
+###
+POST localhost:8081/api/kitchenos.item.registry.v1.ItemRegistryService/ListItems
+Content-Type: application/json
+
+{}
+
+###
+POST localhost:8081/api/kitchenos.item.registry.v1.ItemRegistryService/CreateItem
+Content-Type: application/json
+
+{
+  "name": "Cornbread Cookie Sean Test",
+  "description": "test item description",
+  "item_type": "ITEM_TYPE_FOODSTUFF"
+}
+
+###
+POST localhost:8081/api/kitchenos.item.registry.v1.ItemRegistryService/UpdateItem
+Content-Type: application/json
+
+{
+  "definition_id": "87c45417-73dd-11f1-b08b-4cc5d924fc1e",
+  "name": "test item update test",
+  "description": "test item description update test",
+  "item_type": "ITEM_TYPE_FOODSTUFF"
+}
+
+###
+POST localhost:8081/api/kitchenos.item.registry.v1.ItemRegistryService/ArchiveItem
+Content-Type: application/json
+
+{
+  "definition_id": "87c45417-73dd-11f1-b08b-4cc5d924fc1e"
+}
+
+###
+POST localhost:8081/api/kitchenos.inventory.v1.InventoryService/GetInventorySpaces
+Content-Type: application/json
+
+{
+  "spaceIds": ["466dc1e1-6505-45f3-a9f6-4d54e00d7300"]
+}
+
+###
+POST localhost:8081/api/kitchenos.inventory.v1.InventoryService/GetInventory
+Content-Type: application/json
+
+{
+  "inventoryIds": ["b07b5661-3c21-4a9f-b3de-aa1b5511586f"]
 }
