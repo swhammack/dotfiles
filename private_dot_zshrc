@@ -1,4 +1,5 @@
 export PATH=$PATH:${HOME}/.local/bin
+export EDITOR=nvim
 
 # Start configuration added by Zim install {{{
 
@@ -153,3 +154,10 @@ export AWS_PROFILE="lab37"
 alias authlab37="(cd /home/seanhammack/workspace/lab37/scripts && ./aws-auth)"
 
 COSMIC_DISABLE_DIRECT_SCANOUT=1
+# pnpm
+export PNPM_HOME="/home/seanhammack/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
