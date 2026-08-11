@@ -1,29 +1,108 @@
 let mapleader = " "
 
-set surround
-set easymotion
-set NERDTree
-set which-key
-set VimEverywhere
+" ─────────────────────────────────────────────────────────────
+" IdeaVim-specific options (IDE integration features)
+" ─────────────────────────────────────────────────────────────
+set ideajoin                                  " J uses the IDE's smart join
+set ideamarks                                 " vim marks <-> IDE bookmarks (default on)
+set ideacopypreprocess                        " run IDE copy pre-processors on yank
+set idearefactormode=keep                     " stay in the current vim mode during refactorings
+set ideastatusicon=enabled                    " IdeaVim icon in the status bar
+set ideavimsupport=dialog,dialoglegacy,singleline  " vim in dialogs + single-line fields too
+set ideawrite=all                             " :w triggers "Save All" (runs save-actions)
+set clipboard+=ideaput                        " put through the IDE (reformat/import insertion)
+set unifyjumps                                " share the jump list with the IDE's navigation
+set closenotebooks                            " close notebook editors with :q
+
+" ─────────────────────────────────────────────────────────────
+" Search / feedback features (off by default in IdeaVim)
+" ─────────────────────────────────────────────────────────────
+set incsearch
+set hlsearch
+set showcmd
+set showmode
 
 set notimeout
 
+" ─────────────────────────────────────────────────────────────
+" Bundled extensions — all 23 shipped with IdeaVim 2.45.2
+" ─────────────────────────────────────────────────────────────
+set surround                 " ys / cs / ds
+set commentary               " gc
+set abolish                  " cr coercions: crs crm crc cru cr- cr.
+set exchange                 " cx
+set ReplaceWithRegister      " gr / grr
+set highlightedyank          " flash the yanked region
+set matchit                  " % across language-aware pairs
+set multiple-cursors         " see mappings below
+set NERDTree                 " :NERDTree, project view as a vim buffer
+set vim-paragraph-motion     " { } treat whitespace-only lines as blank
+set indentwise               " [- [+ [= ]- ]+ ]= indent-level motions
+set CamelCaseMotion          " <leader>w <leader>b <leader>e + i<leader>w
+set sneak                    " s{char}{char} / S{char}{char}
+set VimEverywhere            " vim keys outside the editor (needs AceJump)
+set youcompleteme            " completion popup navigation in insert mode
+
+" Text objects
+set targets                  " ci( cin" da, etc. — the big text-object pack
+set mini-ai                  " enhanced a/i objects with counts
+set argtextobj               " aa / ia — function arguments
+set functextobj              " af / if — function bodies
+set classtextobj             " ac / ic — classes
+set textobj-entire           " ae / ie — whole buffer
+set textobj-indent           " ai / ii — indent blocks
+set textobj-user             " framework for your own textobj#user#plugin() objects
+
+" ─────────────────────────────────────────────────────────────
+" Extensions that need a separate JetBrains plugin installed
+" ─────────────────────────────────────────────────────────────
+set which-key                " plugin: "Which-Key" / "Which-Key (lazy)"
+set easymotion               " plugins: "IdeaVim-EasyMotion" + "AceJump"
+set quickscope             " plugin: "IdeaVim-Quickscope"
+set dial                   " plugin: "Vim Dial" (also needs IdeaVim > 2.45)
+set anyobject              " plugin: "Vim AnyObject" (also needs IdeaVim > 2.45)
+
+let g:WhichKey_ShowVimActions = "true"
+
+" multiple-cursors: 2.45 defaults are <C-n>/<C-x>/<C-p>, which your sethandler
+" block below routes to the IDE. Use the pre-2.45 Alt mappings instead.
+let g:multi_cursor_use_default_mapping = 0
+map <A-n> <Plug>NextWholeOccurrence
+map g<A-n> <Plug>NextOccurrence
+map <A-x> <Plug>SkipOccurrence
+map <A-p> <Plug>RemoveOccurrence
+map <A-a> <Plug>AllWholeOccurrences
+map g<A-a> <Plug>AllOccurrences
+
+" ─────────────────────────────────────────────────────────────
+" Mappings
+" ─────────────────────────────────────────────────────────────
 :map <leader>f  <Action>(ReformatCode)
-:map <leader>-  <Action>(MoveTabDown)
-:map <leader>|  <Action>(MoveTabRight)
+:map <leader>s  <Action>(MoveTabDown)
+:map <leader>v  <Action>(MoveTabRight)
 
-let g:WhichKey_ShowVimActions ="true"
-
-sethandler <C-C> n-v-i:ide 
-sethandler <C-X> n-v-i:ide 
-sethandler <C-V> n-v-i:ide 
+" ─────────────────────────────────────────────────────────────
+" Keys handed to the IDE rather than vim
+" ─────────────────────────────────────────────────────────────
+sethandler <C-C> n-v-i:ide
+sethandler <C-X> n-v-i:ide
+sethandler <C-V> n-v-i:ide
 sethandler <C-Z> n-v-i:ide
-sethandler <C-B> n-v-i:ide 
-sethandler <C-Q> n-v-i:ide 
-sethandler <C-A> n-v-i:ide 
-sethandler <C-F> n-v-i:ide 
+sethandler <C-B> n-v-i:ide
+sethandler <C-Q> n-v-i:ide
+sethandler <C-A> n-v-i:ide
+sethandler <C-F> n-v-i:ide
 sethandler <C-R> n-v-i:ide
 sethandler <C-K> n-v-i:ide
 sethandler <C-S> n-v-i:ide
 sethandler <C-P> n-v-i:ide
 sethandler <C-E> n-v-i:ide
+
+" ─────────────────────────────────────────────────────────────
+" Debug / diagnostic switches — uncomment only when you need them
+" ─────────────────────────────────────────────────────────────
+" set trackactionids         " notify the action ID of everything you trigger
+" set ideastrictmode         " throw on internal inconsistencies
+" set ideatracetime          " log handler timings
+" set selectmode=ideaselection  " IDE-made selections enter Select mode
+" set keymodel=startsel,stopsel,continueselect,continuevisual  " shifted keys select
