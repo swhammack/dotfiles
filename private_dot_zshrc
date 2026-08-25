@@ -139,6 +139,8 @@ eval "$(atuin init zsh)"
 
 eval "$(zoxide init zsh)"
 
+source <(kubectl completion zsh)
+
 autoload bashcompinit && bashcompinit
 complete -C "$(which aws_completer)" aws
 
@@ -161,3 +163,4 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+. "/home/seanhammack/.deno/env"
