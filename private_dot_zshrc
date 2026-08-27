@@ -155,6 +155,8 @@ export AWS_PROFILE="lab37"
 
 alias authlab37="(cd /home/seanhammack/workspace/lab37/scripts && ./aws-auth)"
 
+alias ku="kubectl"
+
 COSMIC_DISABLE_DIRECT_SCANOUT=1
 # pnpm
 export PNPM_HOME="/home/seanhammack/.local/share/pnpm"
