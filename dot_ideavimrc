@@ -80,6 +80,7 @@ map g<A-a> <Plug>AllOccurrences
 :map <leader>f  <Action>(ReformatCode)
 :map <leader>s  <Action>(MoveTabDown)
 :map <leader>v  <Action>(MoveTabRight)
+:map <leader>x :bd<cr>
 
 " ─────────────────────────────────────────────────────────────
 " Keys handed to the IDE rather than vim

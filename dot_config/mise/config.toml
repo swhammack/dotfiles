@@ -24,9 +24,12 @@ tilt = "latest"
 k9s = "latest"
 d2 = "latest"
 lazydocker = "latest"
-go = "1.26.2"
+go = "1.27.1"
 argocd = "latest"
 sqlc = "latest"
 buf = "latest"
 pnpm = "latest"
 java = "latest"
+
+[settings.go]
+set_goroot = false
