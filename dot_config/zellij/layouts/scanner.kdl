@@ -1,0 +1,32 @@
+layout {
+    default_tab_template {
+    // the default zellij tab-bar and status bar plugins
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    cwd "~/workspace/lab37/cloud/kitchenos"
+    tab name="scanner" {
+        pane split_direction="vertical" {
+            pane {
+                command "make"
+                args "upkosscanner"
+            }
+            pane split_direction="horizontal" {
+                pane {
+                    command "make"
+                    args "upkosbff"
+                }
+                pane {
+                    cwd "../kos_service"
+                    command "env"
+                    args "AWS_SUBJECT_ID=54e84408-60d1-70f5-2c86-e31342930701" "make" "runexperimentallocal"
+                }
+            }
+        }
+    }
+}
