@@ -144,7 +144,7 @@ source <(kubectl completion zsh)
 autoload bashcompinit && bashcompinit
 complete -C "$(which aws_completer)" aws
 
-if [[ -z "$ZELLIJ_SESSION_NAME" && "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]]; then
+if [[ -t 1 && -z "$ZELLIJ_SESSION_NAME" && "$TERMINAL_EMULATOR" != "JetBrains-JediTerm" ]]; then
     zellij attach -c $USER@$(hostname)
 fi
 
