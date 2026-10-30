@@ -9,20 +9,21 @@ layout {
             plugin location="zellij:status-bar"
         }
     }
-    cwd "~/workspace/lab37/cloud/kitchenos"
-    tab name="scanner" {
+    tab name="scanner" cwd="/home/seanhammack/workspace/lab37/cloud" {
         pane split_direction="vertical" {
             pane {
+                cwd "kitchenos"
                 command "make"
                 args "upkosscanner"
             }
             pane split_direction="horizontal" {
                 pane {
+                    cwd "kitchenos"
                     command "make"
                     args "upkosbff"
                 }
                 pane {
-                    cwd "../kos_service"
+                    cwd "kos_service"
                     command "env"
                     args "AWS_SUBJECT_ID=54e84408-60d1-70f5-2c86-e31342930701" "make" "runexperimentallocal"
                 }
